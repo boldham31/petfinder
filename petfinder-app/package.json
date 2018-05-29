@@ -18,12 +18,14 @@
     "@angular/core": "^6.0.3",
     "@angular/forms": "^6.0.3",
     "@angular/http": "^6.0.3",
+    "@angular/material": "^6.1.0",
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
     "core-js": "^2.4.1",
     "rxjs": "^6.2.0",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.14",
+    "@angular/cdk": "^6.1.0"
   },
   "devDependencies": {
     "@angular/cli": "^6.0.5",

@@ -10,10 +10,10 @@ import { map } from 'rxjs/operators';
 })
 export class NavbarComponent {
 
-  isHandset$: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
+  // isHandset$: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset)
+  //   .pipe(
+  //     map(result => result.matches)
+  //   );
     
   constructor(private breakpointObserver: BreakpointObserver) {}
   

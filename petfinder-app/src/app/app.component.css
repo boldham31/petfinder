@@ -1,10 +1,20 @@
 .header {
     background-color: #3f51b5;
     height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.favorites {
+    color: white;
+    margin-right: 5px;
 }
 
 .main {
     text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 h1 {

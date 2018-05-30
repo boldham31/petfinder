@@ -9,13 +9,17 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { MaterialModule } from './modules/material.module';
 import { SearchComponent } from './search/search.component';
+import { FavoritesComponent } from './favorites/favorites.component';
+import { PetCardComponent } from './pet-card/pet-card.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    SearchComponent
+    SearchComponent,
+    FavoritesComponent,
+    PetCardComponent
   ],
   imports: [
     BrowserModule,

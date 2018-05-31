@@ -1,3 +1,17 @@
 .mat-card {
     margin-bottom: 15px;
 }
+
+.row {
+    display: flex;
+}
+
+img {
+    border-radius: 15%;
+    height: 150px;
+    width: 150px;
+}
+
+.pet-info {
+    margin-left: 10px;
+}

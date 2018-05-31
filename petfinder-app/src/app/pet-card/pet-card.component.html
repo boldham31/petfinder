@@ -1,5 +1,12 @@
 <mat-card>
-    <mat-card-title>{{pet.name.$t}}</mat-card-title>
-    <mat-card-subtitle>{{pet.animal.$t}}</mat-card-subtitle>
+  <div class="row">
+    <div class="col pet-image">
+      <img src="{{pet.media.photos.photo[2].$t}}" />  
+    </div>
+    <div class="col pet-info">
+      <mat-card-title>{{pet.name.$t}}</mat-card-title>
+      <mat-card-subtitle>{{pet.animal.$t}}</mat-card-subtitle>
+    </div>
+  </div>
 </mat-card>
 

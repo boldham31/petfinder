@@ -1,6 +1,9 @@
 <mat-form-field>
   <input matInput placeholder="Search Pets">
 </mat-form-field>
-<button mat-icon-button color="primary">
+<button mat-icon-button color="primary" (click)="submitSearch()">
   <mat-icon aria-label="Example icon-button with a search icon">search</mat-icon>
 </button>
+<div *ngFor="let pet of pets">
+  <app-pet-card></app-pet-card>
+</div>

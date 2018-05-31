@@ -11,6 +11,9 @@ import { MaterialModule } from './modules/material.module';
 import { SearchComponent } from './search/search.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { PetCardComponent } from './pet-card/pet-card.component';
+import { SearchService } from './search/services/search.service';
+import { HttpClientJsonpModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -25,9 +28,11 @@ import { PetCardComponent } from './pet-card/pet-card.component';
     BrowserModule,
     BrowserAnimationsModule,
     LayoutModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientJsonpModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from './services/search.service';
 
 @Component({
   selector: 'app-search',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-
-  constructor() { }
+  pets: any;
+  constructor(private service: SearchService) { }
 
   ngOnInit() {
   }
+
+  async submitSearch() {
+    try {
+      const response = await this.service.getSomething().toPromise();
+      console.log(response);
+      this.pets = response.petfinder.pets.pet;
+      console.log(this.pets);
+  }
+  catch (error) {
+    console.log(error);
+  }
+}
 
 }

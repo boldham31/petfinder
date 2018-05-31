@@ -5,5 +5,5 @@
   <mat-icon aria-label="Example icon-button with a search icon">search</mat-icon>
 </button>
 <div *ngFor="let pet of pets">
-  <app-pet-card></app-pet-card>
+  <app-pet-card [pet]="pet"></app-pet-card>
 </div>

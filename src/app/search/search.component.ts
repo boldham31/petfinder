@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from './services/search.service';
+import { FormControl } from '@angular/forms';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-search',
@@ -8,6 +10,8 @@ import { SearchService } from './services/search.service';
 })
 export class SearchComponent implements OnInit {
   pets: any;
+  zipCode = new FormControl('', [Validators.required]);
+
   constructor(private service: SearchService) { }
 
   ngOnInit() {
@@ -15,7 +19,7 @@ export class SearchComponent implements OnInit {
 
   async submitSearch() {
     try {
-      const response = await this.service.getSomething().toPromise();
+      const response = await this.service.getPets(this.zipCode.value).toPromise();
       console.log(response);
       this.pets = response.petfinder.pets.pet;
       console.log(this.pets);

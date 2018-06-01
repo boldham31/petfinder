@@ -14,6 +14,7 @@ import { PetCardComponent } from './pet-card/pet-card.component';
 import { SearchService } from './search/services/search.service';
 import { HttpClientJsonpModule } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,6 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     LayoutModule,
     MaterialModule,
     HttpClientJsonpModule,

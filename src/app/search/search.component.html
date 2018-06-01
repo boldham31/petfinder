@@ -1,5 +1,5 @@
 <mat-form-field>
-  <input matInput placeholder="Search Pets">
+  <input matInput placeholder="Enter your Zip Code" appearance="outline" [formControl]="zipCode">
 </mat-form-field>
 <button mat-icon-button color="primary" (click)="submitSearch()">
   <mat-icon aria-label="Example icon-button with a search icon">search</mat-icon>

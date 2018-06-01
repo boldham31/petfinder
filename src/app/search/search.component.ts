@@ -26,6 +26,8 @@ export class SearchComponent implements OnInit {
   }
   catch (error) {
     console.log(error);
+    this.zipCode.setErrors({"apiError": true});
+    console.log(this.zipCode);
   }
 }
 

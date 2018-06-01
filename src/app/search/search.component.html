@@ -1,5 +1,8 @@
 <mat-form-field>
   <input matInput placeholder="Enter your Zip Code" appearance="outline" [formControl]="zipCode">
+  <mat-error *ngIf="zipCode.hasError('apiError')">
+    Sorry, something went wrong. Please try again
+  </mat-error>
 </mat-form-field>
 <button mat-icon-button color="primary" (click)="submitSearch()">
   <mat-icon aria-label="Example icon-button with a search icon">search</mat-icon>

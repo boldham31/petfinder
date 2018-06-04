@@ -1,16 +1,13 @@
 <div class="header">
   <div class="favorites">
-    <button mat-icon-button>
+    <button routerLink="/favorites" mat-icon-button>
       <mat-icon>star</mat-icon>
     </button>
   </div>
 </div>
-<div class="main">
-  <h1>Petfinder</h1>
-  <div class="row">
-    <app-search></app-search>
-  </div>
-</div>
+<router-outlet></router-outlet>
+
+
 
 
 

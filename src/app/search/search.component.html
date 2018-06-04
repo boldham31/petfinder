@@ -1,12 +1,17 @@
-<mat-form-field>
-  <input matInput placeholder="Enter your Zip Code" appearance="outline" [formControl]="zipCode">
-  <mat-error *ngIf="zipCode.hasError('apiError')">
-    Sorry, something went wrong. Please try again
-  </mat-error>
-</mat-form-field>
-<button mat-icon-button color="primary" (click)="submitSearch()">
-  <mat-icon aria-label="Example icon-button with a search icon">search</mat-icon>
-</button>
-<div *ngFor="let pet of pets">
-  <app-pet-card [pet]="pet"></app-pet-card>
+<div class="main">
+  <h1>Petfinder</h1>
+  <div class="row">
+    <mat-form-field>
+      <input matInput placeholder="Enter your Zip Code" appearance="outline" [formControl]="zipCode">
+      <mat-error *ngIf="zipCode.hasError('apiError')">
+        Sorry, something went wrong. Please try again
+      </mat-error>
+    </mat-form-field>
+    <button mat-icon-button color="primary" (click)="submitSearch()">
+      <mat-icon aria-label="Example icon-button with a search icon">search</mat-icon>
+    </button>
+    <div *ngFor="let pet of pets">
+      <app-pet-card [pet]="pet"></app-pet-card>
+    </div>
+  </div>
 </div>

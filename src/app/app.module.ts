@@ -15,6 +15,7 @@ import { SearchService } from './search/services/search.service';
 import { HttpClientJsonpModule } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LayoutModule,
     MaterialModule,
     HttpClientJsonpModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [SearchService],
   bootstrap: [AppComponent]

@@ -1,5 +1,7 @@
 .mat-card {
     margin-bottom: 15px;
+    border: 2px solid lightgray;
+    width: 60%;
 }
 
 .row {
@@ -7,11 +9,33 @@
 }
 
 img {
-    border-radius: 15%;
+    border-radius: 1%;
     height: 150px;
     width: 150px;
 }
 
 .pet-info {
     margin-left: 10px;
+}
+
+.mat-card-title {
+    margin-bottom: 4px;
+}
+
+.mat-card-subtitle {
+    text-align: left;
+}
+
+.col.favorite mat-icon {
+    margin-top: 2px;
+    margin-left: 3px;
+}
+
+.mat-elevation-z {
+    box-shadow: none;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
 }

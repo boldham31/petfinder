@@ -4,6 +4,11 @@
     width: 60%;
 }
 
+.mat-card:hover {
+    background-color: #f6f6f6;
+    cursor: pointer;
+}
+
 .row {
     display: flex;
 }

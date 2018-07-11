@@ -8,7 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 const routes: Routes = [
   { path: 'favorites', component: FavoritesComponent },
   { path: 'search', component: SearchComponent },
-  { path: 'profile', component: ProfileComponent }
+  { path: 'profile', component: ProfileComponent },
   { path: '', redirectTo: 'search', pathMatch: 'full' },
 ];
 

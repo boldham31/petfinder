@@ -16,6 +16,7 @@ import { HttpClientJsonpModule } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './/app-routing.module';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { AppRoutingModule } from './/app-routing.module';
     NavbarComponent,
     SearchComponent,
     FavoritesComponent,
-    PetCardComponent
+    PetCardComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

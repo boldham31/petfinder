@@ -1,0 +1,8 @@
+.mat-card {
+    width: 60%;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+}

@@ -13,5 +13,8 @@ export class PetCardComponent implements OnInit {
   ngOnInit() {
     console.log(this.pet);
   }
-
+  
+  openProfile() {
+    console.log('clicked');
+  }
 }

@@ -31,4 +31,8 @@ export class SearchComponent implements OnInit {
   }
 }
 
+  openProfile() {
+    console.log("called");
+  }
+
 }

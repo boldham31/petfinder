@@ -1,4 +1,4 @@
-<div routerLink="/profile" class="card-container">
+<div (click)="openProfile()" routerLink="/profile/{{pet.id.$t}}" class="card-container">
   <mat-card>
     <div class="row">
       <div class="col pet-image">

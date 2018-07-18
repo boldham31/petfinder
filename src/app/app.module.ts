@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './/app-routing.module';
 import { ProfileComponent } from './profile/profile.component';
+import { ProfileService } from './profile/services/profile.service';
 
 
 @NgModule({
@@ -39,7 +40,7 @@ import { ProfileComponent } from './profile/profile.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [SearchService],
+  providers: [SearchService, ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

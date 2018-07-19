@@ -15,6 +15,10 @@
     margin-top: 12px;
 }
 
+.profile-subtitle {
+    font-weight: bold;
+}
+
 
 mat-card {
     text-align: center;

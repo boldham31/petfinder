@@ -1,5 +1,10 @@
 <div class="profile-container">
     <div><img src="{{pet.media.photos.photo[12].$t}}" /></div>
     <div class="profile-title">{{pet.name.$t}}</div>
+    <div class="profile-subtitle">{{pet.breeds.breed[0].$t}}<div *ngIf="pet.mix.$t === 'no'">Mix</div> ○ {{pet.contact.city.$t}}, {{pet.contact.state.$t}}</div>
+    <mat-card>
+      <mat-card-title>Meet {{pet.name.$t}}</mat-card-title>
+      <mat-card-content>{{pet.description.$t}}</mat-card-content>
+    </mat-card>
 </div>
 

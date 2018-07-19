@@ -24,7 +24,6 @@ export class ProfileComponent implements OnInit {
   async getPet() {
     try {
       const response = await this.service.getPetById(this.id).toPromise();
-      console.log(response);
       this.pet = response.petfinder.pet;
       console.log(this.pet);
     }

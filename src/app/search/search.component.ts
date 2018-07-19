@@ -17,19 +17,28 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
 
-  async submitSearch() {
+  submitSearch() {
+    console.log(this.zipCode.valid);
+    console.log(this.zipCode);
+    console.log(this.zipCode.getError);
+    if (this.zipCode.valid) {
+      this.zipLookup()
+    }
+}
+
+  async zipLookup() {
     try {
       const response = await this.service.getPets(this.zipCode.value).toPromise();
       console.log(response);
       this.pets = response.petfinder.pets.pet;
       console.log(this.pets);
+    }
+    catch (error) {
+      console.log(error);
+      this.zipCode.setErrors({"apiError": true});
+      console.log(this.zipCode);
+    }
   }
-  catch (error) {
-    console.log(error);
-    this.zipCode.setErrors({"apiError": true});
-    console.log(this.zipCode);
-  }
-}
 
   openProfile() {
     console.log("called");

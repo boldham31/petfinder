@@ -2,9 +2,12 @@
   <h1>Petfinder</h1>
   <div class="row">
     <mat-form-field>
-      <input matInput placeholder="Enter your Zip Code" appearance="outline" [formControl]="zipCode">
+      <input required maxlength="5" matInput placeholder="Enter your Zip Code" appearance="outline" [formControl]="zipCode">
       <mat-error *ngIf="zipCode.hasError('apiError')">
         Sorry, something went wrong. Please try again
+      </mat-error>
+      <mat-error *ngIf="zipCode.errors.required">
+          Zip Code is required
       </mat-error>
     </mat-form-field>
     <button mat-icon-button color="primary" (click)="submitSearch()">

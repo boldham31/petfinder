@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MaterialModule } from './modules/material.module';
 import { SearchComponent } from './search/search.component';
 import { FavoritesComponent } from './favorites/favorites.component';
@@ -33,6 +33,7 @@ import { ProfileService } from './profile/services/profile.service';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    NgbModule.forRoot(),
     ReactiveFormsModule,
     LayoutModule,
     MaterialModule,

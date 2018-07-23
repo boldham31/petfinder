@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './/app-routing.module';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileService } from './profile/services/profile.service';
+import { MatDialogRef, MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { ProfileService } from './profile/services/profile.service';
     PetCardComponent,
     ProfileComponent
   ],
+  entryComponents: [ ProfileComponent ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -37,11 +39,16 @@ import { ProfileService } from './profile/services/profile.service';
     ReactiveFormsModule,
     LayoutModule,
     MaterialModule,
+    MatDialogModule,
     HttpClientJsonpModule,
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [SearchService, ProfileService],
+  providers: [
+    SearchService, 
+    ProfileService,
+    { provide: MAT_DIALOG_DATA, useValue: {} },
+    { provide: MatDialogRef, useValue: {} }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

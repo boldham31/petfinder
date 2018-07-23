@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material';
+import { ProfileComponent } from '../profile/profile.component';
 
 @Component({
   selector: 'app-pet-card',
@@ -8,9 +9,21 @@ import { Input } from '@angular/core';
 })
 export class PetCardComponent implements OnInit {
   @Input() pet: any;
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
-  ngOnInit() {
-    console.log(this.pet);
+  ngOnInit() {}
+
+  openDialog() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.autoFocus = true;
+
+    dialogConfig.data = {
+      pet: this.pet
+    };
+
+
+    this.dialog.open(ProfileComponent, dialogConfig);
   }
+
+
 }

@@ -29,9 +29,7 @@ export class SearchComponent implements OnInit {
   async zipLookup() {
     try {
       const response = await this.service.getPets(this.zipCode.value).toPromise();
-      console.log(response);
       this.pets = response.petfinder.pets.pet;
-      console.log(this.pets);
     }
     catch (error) {
       console.log(error);

@@ -1,10 +1,31 @@
+<div class="profile-header"><button (click)="close()" mat-icon-button><i class="material-icons">clear</i></button></div>
 <div class="profile-container">
-    <div><img src="{{pet.media.photos.photo[12].$t}}" /></div>
+    <div><img src="{{pet.media.photos.photo[2].$t}}" /></div>
     <div class="profile-title">{{pet.name.$t}}</div>
-    <div class="profile-subtitle">{{pet.breeds.breed[0].$t}}<div *ngIf="pet.mix.$t === 'no'">Mix</div> ○ {{pet.contact.city.$t}}, {{pet.contact.state.$t}}</div>
-    <mat-card>
-      <mat-card-title>Meet {{pet.name.$t}}</mat-card-title>
-      <mat-card-content>{{pet.description.$t}}</mat-card-content>
-    </mat-card>
+    <div class="profile-subtitle"> {{pet.sex.$t}} ○ {{pet.breeds.breed.$t}} ○ {{pet.contact.city.$t}}, {{pet.contact.state.$t}}</div>
+    <div>{{pet.description.$t}}</div>
+    <!-- <div class="profile-subtitle">{{pet.breeds.breed[0].$t}}<div *ngIf="pet.mix.$t === 'no'">Mix</div> ○ {{pet.contact.city.$t}}, {{pet.contact.state.$t}}</div> -->
+    <!-- <mat-card>
+      <!-- <mat-card-title>Meet {{pet.name.$t}}</mat-card-title> -->
+      <!-- <mat-card-content>{{pet.description.$t}}</mat-card-content> -->
+    <!-- </mat-card> -->
 </div>
 
+
+ <!-- <h2 mat-dialog-title>{{description}}</h2>
+
+<mat-dialog-content [formGroup]="form">
+  
+    <mat-form-field>
+        <input matInput
+                placeholder="Course Description"
+               formControlName="description">
+    </mat-form-field>
+      ....
+ 
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button class="mat-raised-button"(click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
+</mat-dialog-actions> -->

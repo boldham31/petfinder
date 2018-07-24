@@ -9,15 +9,14 @@
     margin-top: 25px;
 }
 
-.profile-header i {
-    display: flex;
-    justify-content: right;
-}
-
 .profile-container .profile-title {
     font-size: 36px;
     font-weight: 500;
     margin-top: 12px;
+}
+
+.profile-header {
+    text-align: right;
 }
 
 .profile-subtitle {
